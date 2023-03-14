@@ -5,9 +5,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 70vh;
+  
+  
 }
 
 .form {
@@ -15,8 +17,14 @@
   border-radius: 10px;
   padding: 2rem;
   min-width: 80%;
+  
   margin: 2rem;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  transform: scale(0.75);
+  
+  
+        
+  
 }
 
 .title {
