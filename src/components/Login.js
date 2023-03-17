@@ -119,16 +119,29 @@ const Login = () => {
   };
 
   return (
-    <Box      display="flex"      flexDirection="column"      justifyContent="space-between"      minHeight="100vh"    >      <Header hasHiddenAuthButtons />      <Box className="content">        <Stack spacing={2} className="form">        <h2 className="title">Login</h2>        <TextField            id="username"            label="username"            variant="outlined"            title="Username"            name="username"            placeholder="Enter Username"            fullWidth            value = {formData.username}
+    <Box      display="flex"      flexDirection="column"      justifyContent="space-between"      minHeight="100vh"    >      
+    <Header hasHiddenAuthButtons />      
+    <Box className="content">       
+     <Stack spacing={2} className="form">       
+      <h2 className="title">Login</h2>        
+      <TextField            id="username"            label="Username"            variant="outlined"            title="Username"            name="username"            placeholder="Enter Username"            fullWidth            value = {formData.username}
             onChange = {handleInputChange}
-          />          <TextField            id="password"            variant="outlined"            label="password"            name="password"            type="password"            fullWidth            value = {formData.password}
+          />          <TextField            id="password"            variant="outlined"            label="Password"            name="password"            type="password"            fullWidth            value = {formData.password}
             onChange = {handleInputChange}
-            placeholder="Enter a password with minimum 6 characters"          />          {isLoading ? (
-            <Box style={{display: 'flex', justifyContent: 'center'}}>            <CircularProgress/>            </Box>          ): (
+            placeholder="Enter a password with minimum 6 characters"          />         
+             {isLoading ? (
+            <Box style={{display: 'flex', justifyContent: 'center'}}>            <CircularProgress/>            </Box>          ): 
+            (
             <Button className="button" variant="contained" onClick={()=>{login(formData)}}>            LOGIN TO QKART
            </Button>          )}
-           <p className="secondary-action">           Don’t have an account?{" "}
-            <Link className="link" to="/register">Register now</Link>          </p>        </Stack>      </Box>      <Footer />    </Box>  );
+           <p className="secondary-action">          
+            Don't have an account?{" "}
+            <Link className="link" to="/register">Register now</Link>          
+            </p>        
+            </Stack>     
+             </Box>      
+             <Footer />    
+             </Box>  );
 };
 
 export default Login;
