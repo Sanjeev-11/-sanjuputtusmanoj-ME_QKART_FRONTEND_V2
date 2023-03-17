@@ -7,9 +7,13 @@ import { config } from "../App";
 import Footer from "./Footer";
 import Header from "./Header";
 import "./Register.css";
+import { useHistory, Link } from "react-router-dom";
+
 const Register = () => {
   const { enqueueSnackbar } = useSnackbar();
-  // TODO: CRIO_TASK_MODULE_REGISTER - Implement the register function
+  const history = useHistory();
+
+
   /**
    * Definition for register handler
    * - Function to be called when the user clicks on the register button or submits the register form
@@ -62,6 +66,7 @@ const Register = () => {
           enqueueSnackbar("Registered successfully", { variant: "success" });
         }
         setIsLoading(false);
+        history.push('/login')
       } 
       catch (error) {
         try{
@@ -174,9 +179,7 @@ const Register = () => {
             }        
            <p className="secondary-action">           
             Already have an account?
-             <a className="link" href="#">             
-                      Login here
-             </a>          
+            <Link className="link" to="/login">Login here</Link>          
              </p>        
              </Stack>     
               </Box>      
