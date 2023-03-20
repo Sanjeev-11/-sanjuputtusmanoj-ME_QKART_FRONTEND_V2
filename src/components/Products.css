@@ -55,7 +55,7 @@
 @media screen and (min-width: 768px) {
   .hero {
     justify-content: flex-end;
-    height: 20rem;
+    height: 25rem;
     padding-right: 8rem;
   }
   .hero-heading {

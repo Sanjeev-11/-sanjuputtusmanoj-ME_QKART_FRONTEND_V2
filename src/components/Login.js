@@ -49,7 +49,7 @@ const Login = () => {
      if(validateInput(formData)){
        setIsLoading(true);
        try{
-        console.log('hi')
+        
          axios.post(`${config.endpoint}/auth/login`,{username:formData.username, password:formData.password}).then((resp)=>{
            if(resp.data.success){
              enqueueSnackbar("Logged in successfully", { variant: "success" });
