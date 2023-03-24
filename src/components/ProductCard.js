@@ -23,7 +23,7 @@ const ProductCard = ({ product, handleAddToCart }) => {
          </CardContent>        
          <Rating name="read-only" value={product.rating} readOnly style={{paddingLeft:'10px'}}/>       
           <br/>       
-           <Button className="button" variant="contained" style={{margin:'auto 10px'}}>
+           <Button className="button" variant="contained" style={{margin:'auto 10px'}} onClick={handleAddToCart}>
             <AddShoppingCartOutlined style={{paddingRight:'15px'}}/>Add to Cart
            </Button>       
             <br/><br/>     
