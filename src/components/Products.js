@@ -406,7 +406,8 @@ const Products = () => {
         onChange={handleSearch}
       />
        <Grid container >
-         <Grid item className="product-grid" xs={12} md={username?9:12} >
+         <Grid item className="product-grid" > 
+         {/* xs={12} md={username?9:12}  */}
            <Box className="hero">
              <p className="hero-heading">
                India's <span className="hero-highlight">FASTEST DELIVERY</span>{" "}
@@ -423,14 +424,7 @@ const Products = () => {
        
          </Grid>
         
-         {/* TODO: CRIO_TASK_MODULE_CART - Display the Cart component */}
-       {username && <Grid item sx={{backgroundColor:"#E9F5E1", display: username !== "" ? "block" : "none"}}  xs={12} md={3}  >
-              <Cart
-              items={cartItems}
-              products={products}
-              handleQuantity={handleQuantity}
-            /></Grid>} 
-         </Grid>
+         
          
          <Grid container>
           
@@ -479,11 +473,19 @@ const Products = () => {
          </Grid>
          
           
-        
+        {/* TODO: CRIO_TASK_MODULE_CART - Display the Cart component */}
+       {username && <Grid item sx={{backgroundColor:"#E9F5E1", display: username !== "" ? "block" : "none"}}  xs={12} md={3}  >
+              <Cart
+              items={cartItems}
+              products={products}
+              handleQuantity={handleQuantity}
+            /></Grid>} 
+         </Grid>
          
          
          
        </Grid><br/>
+       
        
        
        
